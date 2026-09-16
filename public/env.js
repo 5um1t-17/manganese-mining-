@@ -1,3 +1,0 @@
-window.ENV = {
-  MAPBOX_API_KEY: "pk.eyJ1IjoibWF4eDA3IiwiYSI6ImNtdHBodjczaDAxeG8yeHMxNzQyaThlcTgifQ.m92jnstQ6BvcKqs-jMP9bw"
-};

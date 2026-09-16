@@ -5,6 +5,8 @@ import { useStore } from '../store/useStore';
 import styles from './LiveOperations.module.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
+const MAPBOX_ACCESS_TOKEN = import.meta.env.VITE_MAPBOX_API_KEY;
+
 // Feature Data
 const assetFeatures = {
   type: 'FeatureCollection',
@@ -162,7 +164,7 @@ export default function LiveOperations() {
                 <div className={styles.mapbox}>
                   <Map
                     ref={mapRef}
-                    mapboxAccessToken={window.ENV.MAPBOX_API_KEY}
+                    mapboxAccessToken={MAPBOX_ACCESS_TOKEN}
                     initialViewState={{ longitude: 80.63, latitude: 21.82, zoom: 12.3, pitch: 42, bearing: -18 }}
                     mapStyle="mapbox://styles/mapbox/satellite-streets-v12"
                     interactiveLayerIds={layersVisible.assets ? ['assets'] : []}
